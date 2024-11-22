@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { Pressable, StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { useState } from 'react';
 import axios  from 'axios';
 
 export default function App() {
@@ -53,5 +54,28 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    width: '50vh',
+    height: '50vh',
+    margin: 10,
+  },
+  botaoPesquisar: {
+    borderWidth: 1,
+    borderColor: '#845EC2', 
+    borderRadius: 10,
+    fontSize: 18, 
+    fontWeight: '700',
+    backgroundColor: '#AE7CFF', 
+    shadowColor: '#845EC2',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 1,
+    shadowRadius: 0,
+    padding: 10,
+    margin: 20,
+    textAlign: 'center',
+  }, botaoTexto: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
   },
 });
