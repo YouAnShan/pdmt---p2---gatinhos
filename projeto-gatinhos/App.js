@@ -24,7 +24,24 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <Pressable onPress={handlePhotos} style={styles.botaoPesquisar} > 
+        <Text style={styles.botaoTexto} >
+          PESQUISAR 
+        </Text>
+      </Pressable>
+       <ScrollView>
+        {photos.length > 0 ? (
+          photos.slice(0, 5).map((photo, index) => (
+            <Image
+              key={index}
+              source={{ uri: photo.url }}
+              style={styles.image}
+            />
+          ))
+        ) : (
+          <Text>Clique em "pesquisar" para ver fotos de gatinhos!</Text>
+        )}
+      </ScrollView>
       <StatusBar style="auto" />
     </View>
   );
