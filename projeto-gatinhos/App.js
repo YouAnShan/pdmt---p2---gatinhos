@@ -14,6 +14,13 @@ export default function App() {
     }
   };
 
+  const [photos, setPhotos] = useState ([]);
+
+  const handlePhotos = async () => {
+    const newPhotos = await getPhotos();
+    setPhotos(newPhotos);
+  };
+
 
   return (
     <View style={styles.container}>
